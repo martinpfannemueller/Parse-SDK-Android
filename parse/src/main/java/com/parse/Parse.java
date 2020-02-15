@@ -93,6 +93,10 @@ public class Parse {
         ParseCorePlugins.getInstance().reset();
     }
 
+    public static void clearLocalDatastore(){
+        getLocalDatastore().clearDatabase(getApplicationContext());
+    }
+
     static OfflineStore getLocalDatastore() {
         return offlineStore;
     }
